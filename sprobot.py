@@ -36,7 +36,7 @@ def farm(key):
     Return a randomly-generated name of a coffee farm, for a given region key.
     """
 
-    # we use fictious farmers' names by default
+    # we use fictitous farmers' names by default
     name = ' '.join([vocab.first_name(key), vocab.surname(key)])
 
     # if we're creating a farm in Latin America, create a 'Finca SomeName'
