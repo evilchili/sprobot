@@ -50,7 +50,7 @@ def farm(key):
             'Cooperative' if cointoss() else 'Collective'
         ]).strip()
 
-    # If it's not a colelctive, it's either a Farm or an Estate (unless it's a Finca).
+    # If it's not a collective, it's either a Farm or an Estate (unless it's a Finca).
     else:
         name = ' '.join([name, 'Estate' if cointoss() else 'Farm' if key != 'latin' else ''])
 
