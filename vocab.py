@@ -5,6 +5,8 @@
 
 import random
 
+random.seed()
+
 TASTE = [
     'citrus', 'lemon', 'lemonade', 'lime', 'grapefruit', 'clementine', 'tangerine',
     'mandarin orange', 'orange', 'pear', 'green apple', 'red apple', 'melon', 'watermelon',
