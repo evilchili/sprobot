@@ -43,8 +43,8 @@ def farm(key):
     if key == 'latin':
         name = 'Finca ' + vocab.surname(key)
 
-    # 50% of the time, create a SomeName Cooperative or Collective
-    if cointoss():
+    # 20% of the time, create a SomeName Cooperative or Collective
+    if cointoss(20):
         name = ' '.join([
             vocab.first_name(key),
             'Cooperative' if cointoss() else 'Collective'
