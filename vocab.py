@@ -87,7 +87,7 @@ PHRASE = [
     "{modifier} mouthfeel",
     "{taste} in the nose and {taste} on the tongue",
     "{taste} aromas",
-    "aromas of {taste}, {taste} and {taste}"
+    "aromas of {taste}, {taste} and {taste}",
     "{modifier} {taste} nose",
     "{taste} in the streets, {taste} in the sheets",
     "SproBot loves this {obj}",
