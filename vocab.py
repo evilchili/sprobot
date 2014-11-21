@@ -18,23 +18,32 @@ TASTE = [
     'dried dates', 'prune', 'chocolate', 'cacao nibs', 'dark chocolate', "baker's chocolate",
     'bittersweet chocolate', 'cocoa powder', 'milk chocolate', 'sugar', 'vanilla', 'nougat',
     'honey', 'butter', 'cream', 'marshmallow', 'sugar cane', 'brown sugar', 'caramel',
-    'maple syrup', 'molasses', 'cola', 'nut', 'almond', 'hazlenut', 'pecan', 'cashew', 'peanut',
+    'maple syrup', 'molasses', 'cola', 'nut', 'almond', 'hazelnut', 'pecan', 'cashew', 'peanut',
     'walnut', 'grains', 'fresh bread', 'barley', 'wheat', 'rye', 'graham cracker', 'granola',
-    'sweet bread pastry', 'carbon', 'smokey', 'burnt sugar', 'toast', 'spice', 'cloves',
+    'sweet bread pastry', 'carbon', 'smoke', 'burnt sugar', 'toast', 'spice', 'cloves',
     'licorice-anise', 'curry', 'nutmeg', 'ginger', 'coriander', 'cinnamon', 'white pepper',
     'black pepper', 'tomato', 'sundried tomato', 'soy sauce', 'meat', 'leather', 'soil', 'earth',
     'bergamot', 'hops', 'black tea', 'green tea', 'mint', 'sage', 'dill', 'grass', 'snow pea',
     'sweet pea', 'mushroom', 'squash', 'green pepper', 'olive', 'greens', 'straw', 'tobacco',
     'cedar', 'fresh wood', 'flowers', 'lemongrass', 'orange blossom', 'jasmine', 'honeysuckle',
     'magnolia', 'lavender', 'rose hips', 'hibiscus', 'mold', 'phenolic', 'iodine', 'band-aid',
-    'rubber', 'medicinal', 'chlorine', 'musty', 'mildew', 'potato', 'raw potato', 'paper',
-    'dried wood', 'stale bread', 'cardboard', 'wood smoke', 'diesel', 'turpentine', 'baggy',
-    'ash', 'fishy', 'unsweet peas', 'unsweet grain', 'stale grain', 'raw nut', 'decomposing fruit',
-    'sour', 'old wine', 'funk', 'garbage', 'animal hide', 'compost', 'vinegar', 'gamey', 'rot',
+    'rubber', 'medicine', 'chlorine', 'must', 'mildew', 'potato', 'raw potato', 'paper',
+    'dried wood', 'stale bread', 'cardboard', 'wood smoke', 'diesel', 'turpentine', 'bagginess',
+    'ash', 'fish', 'unsweet peas', 'unsweet grain', 'stale grain', 'raw nut', 'decomposing fruit',
+    'sour', 'old wine', 'funk', 'garbage', 'animal hide', 'compost', 'vinegar', 'game', 'rot',
     'terror', 'love', 'ennui', 'death', 'privilege', 'freedom', 'rainbow', 'unicorn', 'starfield',
     'sunbeam', 'daylight', 'night', 'moonbeam', 'beach at midnight', 'hidden forest glade',
     'way forward', 'the past', 'springtime', 'summer', 'late summer', 'winter', 'winter snow',
-    'ice on the windows', 'dust',
+    'ice on the windows', 'dust', 'crispness', 'brightness', 'vibrancy', 'tartness', 'wildness',
+    'lack of balance', 'sharpness', 'pointedness', 'denseness', 'deepness', 'complexity', 'juice',
+    'dirt', 'dullness', 'mildness', 'structure', 'balance', 'roundedness', 'softness', 'delicacy',
+    'dryness', 'astringency', 'cleanliness', 'liveliness', 'jazz', 'classicism', 'tradition',
+    'modernity', 'surprise', 'explosiveness', 'epicness', 'goodness', 'satisfaction', 'greatness',
+    'newness', 'nicety', 'import', 'wonder', 'superlative', 'dreams', 'awesomeness',
+    'deliciousness', 'transcendence', 'irony', 'self-awareness', 'free jazz', 'heavy metal',
+    'dubstep', 'rock and roll', 'Jimi Hendrix guitar riffs', 'atmospherics', 'discord', 'life',
+    'love', 'hugs'
+
 ]
 
 BODY = [
@@ -55,9 +64,25 @@ MODIFIER = [
     'lively', 'funky', 'jazzy', 'classic', 'traditional', 'modern', 'surprising', 'daring',
     'explosive', 'massive', 'epic', 'really pretty good', 'pretty good', 'satisfying',
     'fine', 'great', 'the best', 'new', 'nice', 'important', 'wonderous', 'superlative',
-    'lovely', 'epic', 'hardcore', 'dreamy', 'awesome', 'delicious', 'transcendent', 'killer',
+    'lovely', 'hardcore', 'dreamy', 'awesome', 'delicious', 'transcendent', 'killer',
     'suggestive', 'coy', 'lying', 'tricky', 'simple', 'clear', 'transparent', 'ironic',
-    'self-aware'
+    'self-aware', 'citrusy', 'lemony', 'lime', 'grapfruity', 'clementine', 'tangerine',
+    'orange', 'peary', 'appley', 'melony', 'watermelony', 'honeydewful', 'cantaloupey', 'grapey',
+    'fruity', 'tamarindy', 'passion fruity', 'pineappley', 'mangoey', 'papayaful', 'bananay',
+    'coconut', 'peachy', 'nectariney', 'apricot', 'plummy', 'curranty', 'raisiny', 'figgy',
+    'pruney', 'chocolatey', 'cacao nibby', 'cocoa powdery', 'sugary', 'nougaty', 'buttery',
+    'creamy', 'marshmallowy', 'sugar caney', 'brown sugary', 'caramelized', 'mapley', 'syrupy',
+    'molassesish', 'nutty', 'almondy', 'hazelnutty', 'pecany', 'cashewy', 'peanutty', 'walnutty',
+    'grainy', 'bready', 'wheaty', 'grahamy', 'carbony', 'smokey', 'toasted', 'spiced', 'spicy',
+    'curried', 'gingery', 'coriandery', 'cinnamonish', 'peppery', 'tomatoey', 'saucy', 'meaty',
+    'leathery', 'soiled', 'soily', 'earthy', 'hoppy', 'minty', 'grassy', 'mushroomy', 'squashy',
+    'olive', 'green', 'straw', 'cedary', 'woody', 'flowery', 'lemongrassy', 'blossoming',
+    'honeysuckled', 'lavendered', 'rose hippy', 'hibiscussy', 'moldy', 'phenolic', 'iodiney',
+    'band-aidy', 'rubberized', 'medicinal', 'chlorinated', 'musty', 'mildewed', 'potatoful',
+    'papered', 'cardboardy', 'dieselly', 'turpentiney', 'baggy', 'sour', 'garbage', 'composty',
+    'vinegared', 'rotting', 'gamey', 'terrifying', 'fatal', 'privileged', 'free', 'wintery',
+    'summery', 'autumnal', 'snowy', 'rainy', 'icey', 'blistering', 'hot', 'cooked', 'stewed',
+    'pickled'
 ]
 
 PHRASE = [
@@ -90,6 +115,21 @@ PHRASE = [
     "aromas of {taste}, {taste} and {taste}",
     "{modifier} {taste} nose",
     "{taste} in the streets, {taste} in the sheets",
+    "{taste} and {taste} and {taste}",
+    "{modifier}, {modifier}, {modifier} and {modifier} {taste}",
+    "not the usual {modifier} {taste}",
+    "an unusual {taste} for such a {modifier} {obj}",
+    "surprisingly {modifier} for a {obj} so {body}",
+    "a {obj} with {taste}",
+    "{taste} in a {method}",
+    "expect a {obj} of {modifier}, {modifier} {taste}",
+    "{taste} in a {method}",
+    "try a {method} for {modifier} {taste}",
+    "in a {method}: {taste}",
+    "makes a {modifier} {method} and a {modifier} {method}",
+    "in a {method} this {obj} is {taste}, {taste}",
+    "SproBot suggests a {method} for {modifier} {taste}",
+    "SproBot suggests a {method} for {body} body",
     "SproBot loves this {obj}",
     "SproBot wants more",
     "SproBot recommends this",
@@ -269,7 +309,7 @@ REGION = {
 VARIETY = [
     'arusha', 'bergendal', 'sidikalang', 'jamaican blue mountain', 'bourbon', 'catuai', 'caturra',
     'charrieriana', 'french mission', 'geisha', 'guadeloupe bonifieur', 'hawaiian kona', 'java',
-    'kenya K7', 'maragogype', 'mayagüez', 'yemeni mocha', 'mundo novo', 'orange burbon',
+    'kenya K7', 'maragogype', 'mayaguez', 'yemeni mocha', 'mundo novo', 'orange burbon',
     'yellow burbon', 'red burbon', 'pacamera', 'paca', 'pache collis', 'pache comum', 's795',
     'brazil santos', 'sarchimor', 'SL28', 'SL34', 'S795', 'timor', 'arabusta', 'typica',
     'monsoon malabar'
@@ -277,6 +317,21 @@ VARIETY = [
 
 VARIETY_MODIFIER = [
     'AA', 'AAA', 'Microlot', 'Peaberry'
+]
+
+METHOD = [
+    'chemex', 'V60', 'french press', 'press', 'mokka pot', 'pour-over', 'drip coffee',
+    'aeropress', 'inverted aeropress', 'turkish coffee', 'cold brew', 'kone', 'siphon', 'vac pot',
+    'clever dripper', 'abid', 'Eva Solo', 'Affogato', 'Antoccino', 'black eye', 'black tie', 'breve',
+    'Americano', 'café au lait', 'café bombón', 'café Cubano', 'Caffè crema', 'Café de olla',
+    'latte', 'Marocchino', 'Caffè Medici', 'Café miel', 'Coffee milk', 'mocha',
+    'Café Touba', 'Cafe Zorro', 'Ca phe sua da', 'Cappuccino', 'Chai latte', 'Cold brew', 'Cortado',
+    'Decaf', 'Doppio', 'Eggnog latte', 'Eiskaffee', 'Espressino', 'Espresso', 'Espresso Romano',
+    'Frozen coffee drink', 'Flat white', 'Galão', 'Guillermo', 'Greek frappé coffee', 'Green eye',
+    'Half-caf', 'Iced coffee', 'Indian filter coffee', 'Instant coffee', 'Irish coffee',
+    'Kapeng barako', 'Kopi susu', 'Latte macchiato', 'Liqueur coffee', 'Macchiato', 'Mazagran',
+    'Mélange', 'Mocha', 'Moka', 'Palazzo', 'Pharisäer', 'Pocillo', 'Red eye', 'Red tie', 'Ristretto',
+    'Rüdesheimer kaffee', 'Turkish coffee', 'Vienna coffee', 'White coffee', 'Wiener Melange',
 ]
 
 # return a random phrase template
@@ -298,15 +353,18 @@ variety_modifier = lambda: random.choice(VARIETY_MODIFIER)
 region = lambda x: random.choice(REGION[x]).title() if x in REGION else ''
 
 # return a random first name for a given key, if one exists
-first_name = lambda x: random.choice(FIRST_NAME[x]).title() if x in FIRST_NAME else ''
+first_name = lambda x: random.choice(
+    FIRST_NAME[x]).title() if x in FIRST_NAME else ''
 
 # return a random surname for a given key, if one exists
 surname = lambda x: random.choice(SURNAME[x]).title() if x in SURNAME else ''
 
-# return a random word of a given type; used to resolve phrase template format strings.
+# return a random word of a given type; used to resolve phrase template
+# format strings.
 word = {
     'obj': lambda: random.choice(OBJ),
     'modifier': lambda: random.choice(MODIFIER),
     'taste': lambda: random.choice(TASTE),
     'body': lambda: random.choice(BODY),
+    'method': lambda: random.choice(METHOD).title(),
 }

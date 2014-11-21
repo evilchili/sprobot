@@ -103,9 +103,9 @@ def compose():
             if review == '':
                 review = phrase.capitalize()
             elif cointoss():
-                review = review + ', ' + phrase
+                review = review + (', ' if cointoss() else '; ') + phrase
             else:
-                review = review + '. ' + phrase.capitalize()
+                review = review + ('! ' if cointoss(10) else '. ') + phrase.capitalize()
 
         # choose a random coffee variety
         variety = vocab.variety()
@@ -125,9 +125,16 @@ def compose():
                 punc=vocab.punctuation()
             )
 
+        # replace the final comma in the review with 'and'.
+        if cointoss(30):
+            comma = review.rfind(',')
+            if comma != -1:
+                review = review[:comma] + ' and' + review[comma + 1:]
+
         # make 'a' 'an' when preceeding a word starting with a vowel
         for l in 'aeiou':
             review = review.replace(' a ' + l, ' an ' + l)
+            review = review.replace(' A ' + l, ' An ' + l)
 
         # if the review doen't end in punctiation, append a period.
         if review[-1] not in vocab.PUNCTUATION:
