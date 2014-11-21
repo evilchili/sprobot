@@ -22,6 +22,9 @@ import string
 import random
 import vocab
 import sys
+import re
+
+sprobot_re = re.compile('sprobot', re.IGNORECASE)
 
 
 def cointoss(percent=50):
@@ -50,9 +53,11 @@ def farm(key):
             'Cooperative' if cointoss() else 'Collective'
         ]).strip()
 
-    # If it's not a collective, it's either a Farm or an Estate (unless it's a Finca).
+    # If it's not a collective, it's either a Farm or an Estate (unless it's a
+    # Finca).
     else:
-        name = ' '.join([name, 'Estate' if cointoss() else 'Farm' if key != 'latin' else ''])
+        name = ' '.join(
+            [name, 'Estate' if cointoss() else 'Farm' if key != 'latin' else ''])
 
     return ' '.join(name.split())
 
@@ -95,7 +100,8 @@ def compose():
             # vocab.word dict. This allows for multiple substitutions of each {modifier}, {taste},
             # and so on.
             phrase = ''.join(
-                [(x[0] + (vocab.word[x[1]]() if x[1] else '')) for x in string.Formatter().parse(t)]
+                [(x[0] + (vocab.word[x[1]]() if x[1] else ''))
+                 for x in string.Formatter().parse(t)]
             )
 
             # fix up the capitalization and punctuation of the review, allowing for some
@@ -105,7 +111,8 @@ def compose():
             elif cointoss():
                 review = review + (', ' if cointoss() else '; ') + phrase
             else:
-                review = review + ('! ' if cointoss(10) else '. ') + phrase.capitalize()
+                review = review + \
+                    ('! ' if cointoss(10) else '. ') + phrase.capitalize()
 
         # choose a random coffee variety
         variety = vocab.variety()
@@ -114,8 +121,10 @@ def compose():
         if cointoss(10):
             variety = variety + ' ' + vocab.variety_modifier()
 
-        # construct the review out of the region, farm, variety, and joined phrases
-        review = "{} {}, {}: {}".format(vocab.region(key), farm(key), variety, review)
+        # construct the review out of the region, farm, variety, and joined
+        # phrases
+        review = "{} {}, {}: {}".format(
+            vocab.region(key), farm(key), variety, review)
 
         # if we have enough room, occasionally add an exclamation.
         if len(review) < 124 and cointoss():
@@ -143,6 +152,9 @@ def compose():
         # finally, add the rating.
         review = review + ' ' + rating()
 
+        # always camelcase SproBot
+        review = sprobot_re.sub('SproBot', review)
+
         # if the whole review is too long, wipe it out and try again.
         if len(review) >= 140:
             review = ''
@@ -155,7 +167,8 @@ def tweet_review(text):
     Tweet a review.
     """
     from twitter_auth import credentials
-    auth = tweepy.OAuthHandler(credentials.CONSUMER_KEY, credentials.CONSUMER_SECRET)
+    auth = tweepy.OAuthHandler(
+        credentials.CONSUMER_KEY, credentials.CONSUMER_SECRET)
     auth.set_access_token(credentials.ACCESS_KEY, credentials.ACCESS_SECRET)
     api = tweepy.API(auth)
     api.update_status(text)
