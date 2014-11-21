@@ -320,18 +320,18 @@ VARIETY_MODIFIER = [
 ]
 
 METHOD = [
-    'chemex', 'V60', 'french press', 'press', 'mokka pot', 'pour-over', 'drip coffee',
-    'aeropress', 'inverted aeropress', 'turkish coffee', 'cold brew', 'kone', 'siphon', 'vac pot',
-    'clever dripper', 'abid', 'Eva Solo', 'Affogato', 'Antoccino', 'black eye', 'black tie', 'breve',
-    'Americano', 'café au lait', 'café bombón', 'café Cubano', 'Caffè crema', 'Café de olla',
-    'latte', 'Marocchino', 'Caffè Medici', 'Café miel', 'Coffee milk', 'mocha',
-    'Café Touba', 'Cafe Zorro', 'Ca phe sua da', 'Cappuccino', 'Chai latte', 'Cold brew', 'Cortado',
-    'Decaf', 'Doppio', 'Eggnog latte', 'Eiskaffee', 'Espressino', 'Espresso', 'Espresso Romano',
-    'Frozen coffee drink', 'Flat white', 'Galão', 'Guillermo', 'Greek frappé coffee', 'Green eye',
-    'Half-caf', 'Iced coffee', 'Indian filter coffee', 'Instant coffee', 'Irish coffee',
-    'Kapeng barako', 'Kopi susu', 'Latte macchiato', 'Liqueur coffee', 'Macchiato', 'Mazagran',
-    'Mélange', 'Mocha', 'Moka', 'Palazzo', 'Pharisäer', 'Pocillo', 'Red eye', 'Red tie', 'Ristretto',
-    'Rüdesheimer kaffee', 'Turkish coffee', 'Vienna coffee', 'White coffee', 'Wiener Melange',
+    'Chemex', 'V60', 'French press', 'press', 'mokka pot', 'pour-over', 'drip coffee',
+    'Aeropress', 'inverted Aeropress', 'Turkish coffee', 'cold brew', 'Kone', 'siphon', 'vac pot',
+    'Clever Dripper', 'Abid', 'Eva Solo', 'affogato', 'antoccino', 'black eye', 'black tie', 'breve',
+    'Americano', 'café au lait', 'café bombón', 'café Cubano', 'caffè crema', 'café de olla',
+    'latte', 'marocchino', 'caffè Medici', 'café miel', 'coffee milk', 'mocha',
+    'café Touba', 'cafe Zorro', 'Ca phe sua da', 'cappuccino', 'cold brew', 'cortado',
+    'decaf', 'doppio', 'eggnog latte', 'eiskaffee', 'espressino', 'espresso', 'espresso Romano',
+    'frozen coffee drink', 'flat white', 'galão', 'Guillermo', 'Greek frappé coffee', 'green eye',
+    'half-caf', 'iced coffee', 'Indian filter coffee', 'K-Cup', 'Irish coffee',
+    'kapeng barako', 'kopi susu', 'latte macchiato', 'liqueur coffee', 'macchiato', 'mazagran',
+    'mélange', 'palazzo', 'pharisäer', 'pocillo', 'red eye', 'red tie', 'ristretto',
+    'rüdesheimer kaffee', 'Vienna coffee', 'white coffee', 'wiener melange',
 ]
 
 # return a random phrase template
@@ -366,5 +366,5 @@ word = {
     'modifier': lambda: random.choice(MODIFIER),
     'taste': lambda: random.choice(TASTE),
     'body': lambda: random.choice(BODY),
-    'method': lambda: random.choice(METHOD).title(),
+    'method': lambda: random.choice(METHOD),
 }
