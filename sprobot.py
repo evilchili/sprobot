@@ -57,7 +57,7 @@ def farm(key):
     # Finca).
     else:
         name = ' '.join(
-            [name, 'Estate' if cointoss() else 'Farm' if key != 'latin' else ''])
+            [name, ('Estate' if cointoss() else 'Farm') if key != 'latin' else ''])
 
     return ' '.join(name.split())
 
@@ -135,7 +135,7 @@ def compose():
             )
 
         # replace the final comma in the review with 'and'.
-        if cointoss(30):
+        if cointoss(30) and review.count(',') > 2:
             comma = review.rfind(',')
             if comma != -1:
                 review = review[:comma] + ' and' + review[comma + 1:]
