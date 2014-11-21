@@ -86,6 +86,13 @@ MODIFIER = [
 ]
 
 PHRASE = [
+    "an intriguing mix of {modifier} {taste} and {taste}",
+    "a {modifier} finish of {taste} and {taste}",
+    "{taste} fragrance introduces {modifier} acidity",
+    "the {obj} settles with flavors of {taste} and {taste}",
+    "essence of {taste}",
+    "{taste} and {taste} essences",
+    "strong {modifier} acidity heralds notes of {taste}",
     "this {obj} brings promise of a {modifier} {taste}",
     "{modifier} {taste} and {body} body",
     "{body}, {body} {taste} highlights this {modifier} {obj}",
