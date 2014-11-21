@@ -141,7 +141,7 @@ def compose():
                 review = review[:comma] + ' and' + review[comma + 1:]
 
         # make 'a' 'an' when preceeding a word starting with a vowel
-        for l in 'aeiou':
+        for l in 'aeiouAEIOU':
             review = review.replace(' a ' + l, ' an ' + l)
             review = review.replace(' A ' + l, ' An ' + l)
 
