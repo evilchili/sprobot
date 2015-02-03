@@ -17,7 +17,7 @@ def ship():
     Deploy the current branch to production
     """
     cotton.git_push()
-    cotton.update_python_requirements()
+    cotton.install_python_dependencies()
 
     # Deploy the secrets module to the remote project root
     spath = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'secrets'))
