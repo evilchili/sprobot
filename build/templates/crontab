@@ -1,2 +1,1 @@
-LOCKDIR=/tmp
-* * */4 * * %(project_user)s flock -w 15 -n $LOCKDIR/sprobot_cron.lock -c "%(virtualenv_path)s/bin/python %(project_root)s/sprobot.py --post"
+* * */4 * * %(project_user)s cd %(project_root)s && flock -w 15 -n sprobot_cron.lock -c "%(virtualenv_path)s/bin/python sprobot.py --post"
