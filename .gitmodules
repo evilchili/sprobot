@@ -1,0 +1,3 @@
+[submodule "cotton"]
+	path = cotton
+	url = https://github.com/evilchili/cotton
