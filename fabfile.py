@@ -20,6 +20,6 @@ def ship():
     # be created or updated, we can skip the call to the
     # update_python_requirements() task, since it will be
     # carried out automatically by install().
-    if not cotton.install():
-        cotton.update_python_requirements()
+    cotton.install()
     cotton.git_push()
+    cotton.update_python_requirements()
