@@ -15,11 +15,6 @@ def ship():
     """
     Deploy the current branch to production
     """
-
-    # make sure the virtual env was in place. If it had to
-    # be created or updated, we can skip the call to the
-    # update_python_requirements() task, since it will be
-    # carried out automatically by install().
-    cotton.install()
     cotton.git_push()
     cotton.update_python_requirements()
+    cotton.upload_template_and_reload('cron')
