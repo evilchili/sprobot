@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #  -*- coding: UTF-8 -*-
 #
 # sprobot.py
@@ -9,20 +9,21 @@
 # sprobot.py [options]
 #
 # Options:
-# --post     post the review to twitter
+# --post     post the review to mastodon
 #
 
-__author__ = 'Greg Boyington (@evilchili)'
+__author__ = 'Greg Boyington (evilchili@mastodon.social)'
 __copyright__ = 'Copyleft (k) YOLD 3180. All Fail Disfnordia'
 __license__ = 'FNORD'
 __version__ = '1.2.3'
 
-import tweepy
+from mastodon import Mastodon
 import string
 import random
 import vocab
 import sys
 import re
+import os
 
 sprobot_re = re.compile('sprobot', re.IGNORECASE)
 
@@ -162,24 +163,16 @@ def compose():
     return review
 
 
-def tweet_review(text):
-    """
-    Tweet a review.
-    """
-    from secrets.twitter_auth import credentials
-    auth = tweepy.OAuthHandler(
-        credentials.CONSUMER_KEY, credentials.CONSUMER_SECRET)
-    auth.set_access_token(credentials.ACCESS_KEY, credentials.ACCESS_SECRET)
-    api = tweepy.API(auth)
-    api.update_status(text)
-
-
 if __name__ == '__main__':
 
     # compose a review
-    tweet = compose()
-    print "%s %s" % (len(tweet), tweet)
+    review = compose()
+    print(review)
 
     # optionally, tweet the review.
     if '--post' in sys.argv:
-        tweet_review(tweet)
+        client = Mastodon(
+            access_token=os.environ.get('MASTODON_TOKEN'),
+            api_base='https://botsin.space/'
+        )
+        client.toot(review)
