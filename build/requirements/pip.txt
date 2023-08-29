@@ -2,5 +2,5 @@ Fabric==1.10.1
 ecdsa==0.13.3
 paramiko==2.0.9
 pycrypto==2.6.1
-tweepy==2.3.0
+tweepy==3.0
 wsgiref==0.1.2
